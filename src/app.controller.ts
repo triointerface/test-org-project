@@ -14,7 +14,6 @@ export class AppController {
   @Get('/trello-auth/login')
   @UseGuards(TrelloAuth)
   async autorizeCallback(@Req() req): Promise<any> {
-    console.log(req?.user);
     return req?.user;
   }
 }
